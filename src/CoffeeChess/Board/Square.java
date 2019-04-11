@@ -7,7 +7,7 @@ import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 
 public class Square extends Rectangle {
-    private static final int size = CoffeeChessApp.SQUARE_SIZE;
+    private static final int size = Board.SQUARE_SIZE;
 
     private Piece piece;
 
