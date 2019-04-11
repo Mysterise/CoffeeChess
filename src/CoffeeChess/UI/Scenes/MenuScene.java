@@ -1,5 +1,6 @@
-package CoffeeChess.UI;
+package CoffeeChess.UI.Scenes;
 
+import CoffeeChess.UI.Display;
 import javafx.application.Platform;
 import javafx.scene.control.Label;
 import javafx.scene.*;
@@ -18,8 +19,8 @@ public class MenuScene extends SceneBase {
 
         /* Title */
         Label titleLabel = new Label("Coffee Chess");
-        titleLabel.setTextFill(TEXT_COLOR);
-        titleLabel.setFont(TITLE_FONT);
+        titleLabel.setTextFill(Display.TEXT_COLOR);
+        titleLabel.setFont(Display.TITLE_FONT);
 
         /* Analysis Button*/
         Button analysisButton = new Button();
@@ -33,7 +34,7 @@ public class MenuScene extends SceneBase {
 
         /* Creating Layout */
         VBox menuLayout = new VBox(20);
-        menuLayout.setStyle("-fx-background-color: " + Display.ColourToStringHex(BACKGROUND_COLOR));
+        menuLayout.setStyle("-fx-background-color: " + Display.ColourToStringHex(Display.BACKGROUND_COLOR));
         menuLayout.setPadding(new Insets(30, 30, 30, 30));
         menuLayout.setAlignment(Pos.CENTER);
 
@@ -44,9 +45,9 @@ public class MenuScene extends SceneBase {
             if (menuChild.getClass().getName().equals("javafx.scene.control.Button")) {
                 Button button = (Button) menuChild;
                 button.setPrefSize(250, 60);
-                button.setStyle("-fx-background-color: " + Display.ColourToStringHex(BUTTON_COLOR));
-                button.setTextFill(TEXT_COLOR);
-                button.setFont(NORMAL_FONT);
+                button.setStyle("-fx-background-color: " + Display.ColourToStringHex(Display.BUTTON_COLOR));
+                button.setTextFill(Display.TEXT_COLOR);
+                button.setFont(Display.NORMAL_FONT);
             }
         }
 

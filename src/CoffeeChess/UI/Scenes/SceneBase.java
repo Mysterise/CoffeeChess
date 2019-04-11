@@ -1,5 +1,6 @@
-package CoffeeChess.UI;
+package CoffeeChess.UI.Scenes;
 
+import CoffeeChess.UI.Display;
 import javafx.application.Platform;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;

@@ -1,4 +1,4 @@
-package CoffeeChess.UI;
+package CoffeeChess.UI.Scenes;
 
 public class AnalysisScene extends SceneBase {
 

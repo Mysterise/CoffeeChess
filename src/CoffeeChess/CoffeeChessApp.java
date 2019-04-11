@@ -1,7 +1,7 @@
 package CoffeeChess;
 
-import CoffeeChess.UI.MenuScene;
-import CoffeeChess.UI.SceneBase;
+import CoffeeChess.UI.Scenes.MenuScene;
+import CoffeeChess.UI.Scenes.SceneBase;
 import javafx.application.Application;
 import javafx.stage.Stage;
 
