@@ -10,6 +10,10 @@ import javafx.scene.text.FontWeight;
  */
 public abstract class Display {
 
+    /*
+     Colours
+     */
+
     /**
      * Coffee-Themed Color Palette
      * [ESPRESSO, MOCHA, CAPPUCINO, LATTE, FLAT_WHITE] from https://www.color-hex.com/color-palette/30023
@@ -24,13 +28,9 @@ public abstract class Display {
         public static final Color LATTE = Color.rgb(219, 193, 172);
         public static final Color FLAT_WHITE = Color.rgb(236, 224, 209);
     }
-
-    public static final Color BUTTON_COLOR = ColorPalette.LONG_BLACK;
-    public static final Color BACKGROUND_COLOR = ColorPalette.ESPRESSO;
+    public static final Color BACKGROUND_COLOR = ColorPalette.MOCHA;
+    public static final Color BUTTON_COLOR = ColorPalette.ESPRESSO;
     public static final Color TEXT_COLOR = ColorPalette.FLAT_WHITE;
-
-    public static final Font TITLE_FONT =  Font.font("Verdana", FontWeight.BOLD, FontPosture.REGULAR, 100);
-    public static final Font NORMAL_FONT = Font.font("Verdana", FontWeight.BOLD, FontPosture.REGULAR, 25);
 
     public static String ColourToStringHex(Color color) {
         return String.format("#%02x%02x%02x",
@@ -38,4 +38,13 @@ public abstract class Display {
                 (int) (color.getGreen() * 255),
                 (int) (color.getBlue() * 255));
     }
+
+    /*
+     Fonts
+     */
+
+    public static final String FONT_FAMILY = "Verdana";
+    public static final Font TITLE_FONT =  Font.font(FONT_FAMILY, FontWeight.BLACK, FontPosture.REGULAR, 100);
+    public static final Font NORMAL_FONT = Font.font(FONT_FAMILY, FontWeight.SEMI_BOLD, FontPosture.REGULAR, 25);
+
 }

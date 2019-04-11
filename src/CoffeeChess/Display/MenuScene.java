@@ -32,14 +32,14 @@ public class MenuScene extends SceneBase {
         analysisButton.setOnAction(e -> startAnalysis());
 
         /* Quit Button */
-        Button menu_close_button = new Button();
-        menu_close_button.setText("Quit");
-        menu_close_button.setOnAction(e -> Platform.exit());
+        Button closeButton = new Button();
+        closeButton.setText("Quit");
+        closeButton.setOnAction(e -> Platform.exit());
 
         /* Creating Layout */
         VBox menuLayout = new VBox(20);
         // Adding all children
-        menuLayout.getChildren().addAll(titleLabel, analysisButton, menu_close_button);
+        menuLayout.getChildren().addAll(titleLabel, analysisButton, closeButton);
         menuLayout.setStyle("-fx-background-color: " + Display.ColourToStringHex(BACKGROUND_COLOR));
         menuLayout.setPadding(new Insets(30, 30, 30, 30));
         menuLayout.setAlignment(Pos.CENTER);
