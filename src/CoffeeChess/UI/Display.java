@@ -33,7 +33,7 @@ public abstract class Display {
     public static final Color BUTTON_COLOR = ColorPalette.ESPRESSO;
     public static final Color TEXT_COLOR = ColorPalette.FLAT_WHITE;
 
-    public static String ColourToStringHex(Color color) {
+    public static String ColourToHexString(Color color) {
         return String.format("#%02x%02x%02x",
                 (int) (color.getRed() * 255),
                 (int) (color.getGreen() * 255),
