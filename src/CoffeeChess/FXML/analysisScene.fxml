@@ -6,10 +6,8 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<Pane fx:id="chessBoard" xmlns="http://javafx.com/javafx"
-      xmlns:fx="http://javafx.com/fxml"
-      fx:controller="CoffeeChess.CoffeeChessApp"
-      prefHeight="400.0" prefWidth="600.0">
-
-
+<?import javafx.scene.text.Text?>
+<Pane xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml">
+    <Pane fx:id="chessBoard"></Pane>
 </Pane>

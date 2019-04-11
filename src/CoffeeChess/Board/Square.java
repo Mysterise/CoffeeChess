@@ -7,13 +7,16 @@ import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 
 public class Square extends Rectangle {
+    private static final int size = CoffeeChessApp.SQUARE_SIZE;
+
     private Piece piece;
 
     public Square(boolean light, Position pos) {
-        setWidth(CoffeeChessApp.SQUARE_SIZE);
-        setHeight(CoffeeChessApp.SQUARE_SIZE);
-        relocate(pos.x * CoffeeChessApp.SQUARE_SIZE, pos.y * CoffeeChessApp.SQUARE_SIZE);
-        setFill(light ? Color.WHITE : Color.BROWN);
+
+        setWidth(size);
+        setHeight(size);
+        setFill(light ? Color.WHITE : Color.LIGHTGOLDENRODYELLOW);
+        relocate(pos.getColumn() * size, pos.getRow() * size);
     }
 
     public boolean hasPiece() {

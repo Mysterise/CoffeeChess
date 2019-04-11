@@ -18,16 +18,17 @@ import java.io.IOException;
 
 public class CoffeeChessApp extends Application {
 
-    public static final int SCREEN_WIDTH = 1280;
-    public static final int SCREEN_HEIGHT = 800;
+    public static final int SCREEN_WIDTH = 1440;
+    public static final int SCREEN_HEIGHT = 960;
 
     public static final int SQUARE_SIZE = 100;
-    public static final int WIDTH = 8;
-    public static final int HEIGHT = 8;
+    public static final int NUM_COLUMNS = 8;
+    public static final int NUM_ROWS = 8;
 
     private Stage primaryStage;
 
     public Pane chessBoard;
+
     private Group squareGroup = new Group();
     private Group pieceGroup = new Group();
 
@@ -51,15 +52,17 @@ public class CoffeeChessApp extends Application {
 
     @FXML
     public void enterAnalysisScene(Event e) throws IOException {
-//        Parent root = FXMLLoader.load(getClass().getResource("FXML/analysisScene.fxml"));
-        chessBoard = new Pane();
-        Scene analysisScene = new Scene(chessBoard, SCREEN_WIDTH, SCREEN_HEIGHT);
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("FXML/analysisScene.fxml"));
+        loader.setController(this);
+        Parent root = loader.load();
+
+        Scene analysisScene = new Scene(root, SCREEN_WIDTH, SCREEN_HEIGHT);
         analysisScene.getStylesheets().add(getClass().getResource("FXML/menuScene.css").toExternalForm());
 
         chessBoard.getChildren().addAll(squareGroup, pieceGroup);
-        for (int y = 0; y < HEIGHT; y++) {
-            for (int x = 0; x < HEIGHT; x++) {
-                Square square = new Square((x + y) % 2 == 0, new Position(x, y));
+        for (int row = 0; row < NUM_ROWS; row++) {
+            for (int column = 0; column < NUM_COLUMNS; column++) {
+                Square square = new Square((column + row) % 2 == 0, new Position(column, row));
                 squareGroup.getChildren().add(square);
             }
         }
