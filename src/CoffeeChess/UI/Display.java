@@ -24,7 +24,7 @@ public abstract class Display {
         public static final Color LONG_BLACK = Color.rgb(30, 20, 10);
         public static final Color ESPRESSO = Color.rgb(56, 34, 15);
         public static final Color MOCHA = Color.rgb(99, 72, 50);
-        public static final Color CAPPUCINO = Color.rgb(150, 114, 89);
+        public static final Color CAPPUCCINO = Color.rgb(150, 114, 89);
         public static final Color LATTE = Color.rgb(219, 193, 172);
         public static final Color FLAT_WHITE = Color.rgb(236, 224, 209);
     }
