@@ -17,7 +17,7 @@ public class CoffeeChessApp extends Application {
     @Override
     public void start(Stage stage) throws Exception {
         stage.setTitle("Coffee Chess");
-        stage.initStyle(StageStyle.DECORATED);
+        stage.initStyle(StageStyle.UNDECORATED);
         stage.setResizable(false);
 
         new MenuScene(stage);
