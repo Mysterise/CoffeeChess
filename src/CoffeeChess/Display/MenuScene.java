@@ -15,14 +15,6 @@ import javafx.geometry.*;
 public class MenuScene extends SceneBase {
 
     public MenuScene () {
-        stage.setTitle("Coffee Chess");
-
-        /* Closing game */
-        stage.setOnCloseRequest(e->{
-            e.consume();
-            Platform.exit();
-            System.exit(0);
-        });
 
         /* Title */
         Label titleLabel = new Label("Coffee Chess");

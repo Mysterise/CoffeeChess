@@ -3,6 +3,7 @@ package CoffeeChess;
 import CoffeeChess.Display.MenuScene;
 import CoffeeChess.Display.SceneBase;
 import javafx.application.Application;
+import javafx.application.Platform;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
@@ -19,11 +20,8 @@ public class CoffeeChessApp extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
-        stage.setTitle("Coffee Chess");
-        stage.initStyle(StageStyle.UNDECORATED);
-        stage.setResizable(false);
-
         SceneBase.setStage(stage);
+        SceneBase.initStage();
         new MenuScene();
     }
 }
