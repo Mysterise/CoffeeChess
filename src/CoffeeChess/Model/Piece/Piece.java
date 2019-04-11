@@ -1,4 +1,4 @@
-package CoffeeChess.Piece;
+package CoffeeChess.Model.Piece;
 
 public abstract class Piece {
 

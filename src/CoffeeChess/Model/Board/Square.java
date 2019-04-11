@@ -1,8 +1,7 @@
-package CoffeeChess.Board;
+package CoffeeChess.Model.Board;
 
-import CoffeeChess.CoffeeChessApp;
-import CoffeeChess.Piece.Piece;
-import CoffeeChess.Piece.Position;
+import CoffeeChess.Model.Piece.Piece;
+import CoffeeChess.Model.Piece.Position;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 

@@ -1,4 +1,4 @@
-package CoffeeChess.Display;
+package CoffeeChess.UI;
 
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
@@ -28,6 +28,7 @@ public abstract class Display {
         public static final Color LATTE = Color.rgb(219, 193, 172);
         public static final Color FLAT_WHITE = Color.rgb(236, 224, 209);
     }
+
     public static final Color BACKGROUND_COLOR = ColorPalette.MOCHA;
     public static final Color BUTTON_COLOR = ColorPalette.ESPRESSO;
     public static final Color TEXT_COLOR = ColorPalette.FLAT_WHITE;

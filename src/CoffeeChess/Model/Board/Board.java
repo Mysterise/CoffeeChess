@@ -1,6 +1,6 @@
-package CoffeeChess.Board;
+package CoffeeChess.Model.Board;
 
-import CoffeeChess.Piece.Position;
+import CoffeeChess.Model.Piece.Position;
 import javafx.scene.Group;
 import javafx.scene.layout.Pane;
 

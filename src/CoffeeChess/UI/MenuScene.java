@@ -1,4 +1,4 @@
-package CoffeeChess.Display;
+package CoffeeChess.UI;
 
 import javafx.application.Platform;
 import javafx.scene.control.Label;
