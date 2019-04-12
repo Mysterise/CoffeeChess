@@ -1,5 +1,6 @@
 package CoffeeChess.UI.Board;
 
+import CoffeeChess.Model.Piece.Piece;
 import CoffeeChess.UI.Board.Pieces.PieceImageView;
 import CoffeeChess.Model.Position;
 import CoffeeChess.UI.DisplayConfig;
@@ -12,13 +13,13 @@ public class SquareStackPane extends StackPane {
     private Rectangle squareCell;
     private PieceImageView pieceImageView;
 
-    public SquareStackPane(boolean light, Position pos) {
+    public SquareStackPane(boolean light, Position pos, Piece piece) {
         squareCell = new Rectangle();
         squareCell.setWidth(size);
         squareCell.setHeight(size);
         squareCell.setFill(light ? DisplayConfig.ColorPalette.FLAT_WHITE : DisplayConfig.ColorPalette.LATTE);
 
-        pieceImageView = new PieceImageView();
+        pieceImageView = new PieceImageView(piece);
 
         getChildren().addAll(squareCell, pieceImageView);
 

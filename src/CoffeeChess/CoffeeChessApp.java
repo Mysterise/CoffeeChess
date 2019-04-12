@@ -1,5 +1,6 @@
 package CoffeeChess;
 
+import CoffeeChess.Model.ModelManager;
 import CoffeeChess.UI.UIManager;
 import javafx.application.Application;
 import javafx.stage.Stage;
@@ -11,14 +12,16 @@ import javafx.stage.Stage;
  */
 public class CoffeeChessApp extends Application {
 
-    UIManager UIManager;
+    public static ModelManager ModelManager;
+    public static UIManager UIManager;
 
     public static void main(String[] args) {
         Application.launch(args);
     }
 
     @Override
-    public void start(Stage stage) throws Exception {
+    public void start(Stage stage) {
+        ModelManager = new ModelManager();
         UIManager = new UIManager(stage);
         UIManager.startMenuScene();
     }

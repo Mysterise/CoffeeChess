@@ -31,4 +31,9 @@ public class Pawn extends Piece {
             relativeMove.setRow(-relativeMove.getRow());
         }
     }
+
+    @Override
+    public String toString() {
+        return "" + colorNotation() + "_pawn";
+    }
 }

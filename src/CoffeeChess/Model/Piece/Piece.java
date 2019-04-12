@@ -16,6 +16,17 @@ public abstract class Piece {
         this.pos = pos;
     }
 
+    @Override
+    public abstract String toString();
+
+    /**
+     * Helper method for toString()
+     * @return 'w' or 'b' depending on isWhite
+     */
+    protected char colorNotation() {
+        return this.isWhite ? 'w' : 'b';
+    }
+
 //    public abstract boolean move(Position pos);
 
 }
