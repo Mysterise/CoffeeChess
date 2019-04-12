@@ -2,7 +2,6 @@ package CoffeeChess.UI.Scenes;
 
 import CoffeeChess.UI.Display;
 import javafx.application.Platform;
-import javafx.scene.Scene;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
@@ -13,7 +12,6 @@ public class SceneManager extends Display {
     public static int screenHeight = 960;
 
     private static Stage stage;
-    private Scene currentScene;
 
     private MenuScene menuScene = new MenuScene(this);
     private AnalysisScene analysisScene = new AnalysisScene(this);
