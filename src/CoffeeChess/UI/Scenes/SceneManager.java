@@ -44,7 +44,7 @@ public class SceneManager extends Display {
     }
 
     private void showScene(SceneBase sceneBase) {
-        stage.setScene(new Scene(sceneBase.root, screenWidth, screenHeight));
+        stage.setScene(sceneBase.getScene());
         stage.show();
     }
 }

@@ -2,6 +2,7 @@ package CoffeeChess.UI.Board;
 
 import CoffeeChess.Model.Piece.Piece;
 import CoffeeChess.Model.Piece.Position;
+import CoffeeChess.UI.Display;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 
@@ -11,10 +12,9 @@ public class Square extends Rectangle {
     private Piece piece;
 
     public Square(boolean light, Position pos) {
-
         setWidth(size);
         setHeight(size);
-        setFill(light ? Color.WHITE : Color.LIGHTGOLDENRODYELLOW);
+        setFill(light ? Display.ColorPalette.FLAT_WHITE : Display.ColorPalette.LATTE);
         relocate(pos.getColumn() * size, pos.getRow() * size);
     }
 

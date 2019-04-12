@@ -1,6 +1,6 @@
 package CoffeeChess.UI.Scenes;
 
-import javafx.scene.Parent;
+import javafx.scene.Scene;
 
 /**
  * Base class for all CoffeeChess Scenes to inherit.
@@ -9,5 +9,9 @@ import javafx.scene.Parent;
  */
 public abstract class SceneBase {
     protected SceneManager sceneManager;
-    public Parent root;
+    protected Scene scene;
+
+    public Scene getScene() {
+        return scene;
+    }
 }

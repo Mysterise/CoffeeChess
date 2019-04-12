@@ -41,7 +41,7 @@ public class MenuScene extends SceneBase {
 
         // Adding all nodes to menuLayout
         menuLayout.getChildren().addAll(titleLabel, analysisButton, closeButton);
-        // Modifying all nodes
+        // Modifying all button nodes
         for (Node menuChild : menuLayout.getChildren()) {
             if (menuChild.getClass().getName().equals("javafx.scene.control.Button")) {
                 Button button = (Button) menuChild;
@@ -52,6 +52,6 @@ public class MenuScene extends SceneBase {
             }
         }
 
-        root = menuLayout;
+        this.scene = new Scene(menuLayout, sceneManager.screenWidth, sceneManager.screenHeight);
     }
 }
