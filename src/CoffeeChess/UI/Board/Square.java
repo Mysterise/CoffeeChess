@@ -1,4 +1,4 @@
-package CoffeeChess.Model.Board;
+package CoffeeChess.UI.Board;
 
 import CoffeeChess.Model.Piece.Piece;
 import CoffeeChess.Model.Piece.Position;

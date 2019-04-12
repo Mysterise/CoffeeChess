@@ -15,7 +15,8 @@ import javafx.geometry.*;
  */
 public class MenuScene extends SceneBase {
 
-    public MenuScene () {
+    public MenuScene (SceneManager sceneManager) {
+        this.sceneManager = sceneManager;
 
         /* Title */
         Label titleLabel = new Label("Coffee Chess");
@@ -25,7 +26,7 @@ public class MenuScene extends SceneBase {
         /* Analysis Button*/
         Button analysisButton = new Button();
         analysisButton.setText("Analysis Board");
-        analysisButton.setOnAction(e -> startAnalysis());
+        analysisButton.setOnAction(e -> sceneManager.startAnalysisScene());
 
         /* Quit Button */
         Button closeButton = new Button();
@@ -51,11 +52,6 @@ public class MenuScene extends SceneBase {
             }
         }
 
-        stage.setScene(new Scene(menuLayout, screenWidth, screenHeight));
-        stage.show();
-    }
-
-    private void startAnalysis() {
-        new AnalysisScene();
+        root = menuLayout;
     }
 }
