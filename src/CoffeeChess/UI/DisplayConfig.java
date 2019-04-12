@@ -8,7 +8,7 @@ import javafx.scene.text.FontWeight;
 /**
  * Meta Class for defining display design choices
  */
-public abstract class Display {
+public abstract class DisplayConfig {
 
     /*
      Colours

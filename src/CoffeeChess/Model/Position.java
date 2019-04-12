@@ -1,4 +1,4 @@
-package CoffeeChess.Model.Piece;
+package CoffeeChess.Model;
 
 public class Position {
     public int row;

@@ -1,5 +1,6 @@
 package CoffeeChess.UI.Scenes;
 
+import CoffeeChess.UI.UIManager;
 import javafx.scene.Scene;
 
 /**
@@ -8,7 +9,7 @@ import javafx.scene.Scene;
  * Contains a static stage reference for the application's only stage window.
  */
 public abstract class SceneBase {
-    protected SceneManager sceneManager;
+    protected UIManager UIManager;
     protected Scene scene;
 
     public Scene getScene() {

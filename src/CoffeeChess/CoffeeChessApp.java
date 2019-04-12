@@ -1,6 +1,6 @@
 package CoffeeChess;
 
-import CoffeeChess.UI.Scenes.SceneManager;
+import CoffeeChess.UI.UIManager;
 import javafx.application.Application;
 import javafx.stage.Stage;
 
@@ -11,7 +11,7 @@ import javafx.stage.Stage;
  */
 public class CoffeeChessApp extends Application {
 
-    SceneManager sceneManager;
+    UIManager UIManager;
 
     public static void main(String[] args) {
         Application.launch(args);
@@ -19,7 +19,7 @@ public class CoffeeChessApp extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
-        sceneManager = new SceneManager(stage);
-        sceneManager.startMenuScene();
+        UIManager = new UIManager(stage);
+        UIManager.startMenuScene();
     }
 }

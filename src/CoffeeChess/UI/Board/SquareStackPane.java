@@ -1,8 +1,8 @@
 package CoffeeChess.UI.Board;
 
 import CoffeeChess.UI.Board.Pieces.PieceImageView;
-import CoffeeChess.Model.Piece.Position;
-import CoffeeChess.UI.Display;
+import CoffeeChess.Model.Position;
+import CoffeeChess.UI.DisplayConfig;
 import javafx.scene.layout.StackPane;
 import javafx.scene.shape.Rectangle;
 
@@ -16,7 +16,7 @@ public class SquareStackPane extends StackPane {
         squareCell = new Rectangle();
         squareCell.setWidth(size);
         squareCell.setHeight(size);
-        squareCell.setFill(light ? Display.ColorPalette.FLAT_WHITE : Display.ColorPalette.LATTE);
+        squareCell.setFill(light ? DisplayConfig.ColorPalette.FLAT_WHITE : DisplayConfig.ColorPalette.LATTE);
 
         pieceImageView = new PieceImageView();
 

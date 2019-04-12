@@ -1,7 +1,8 @@
 package CoffeeChess.UI.Scenes;
 
 import CoffeeChess.UI.Board.BoardPane;
-import CoffeeChess.UI.Display;
+import CoffeeChess.UI.DisplayConfig;
+import CoffeeChess.UI.UIManager;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Node;
@@ -12,24 +13,24 @@ import javafx.scene.layout.FlowPane;
 
 public class AnalysisScene extends SceneBase {
 
-    public AnalysisScene(SceneManager sceneManager) {
-        this.sceneManager = sceneManager;
+    public AnalysisScene(UIManager UIManager) {
+        this.UIManager = UIManager;
 
         /* Title */
         Label titleLabel = new Label("Analysis Board");
-        titleLabel.setTextFill(Display.TEXT_COLOR);
-        titleLabel.setFont(Display.HEADING_FONT);
+        titleLabel.setTextFill(DisplayConfig.TEXT_COLOR);
+        titleLabel.setFont(DisplayConfig.HEADING_FONT);
 
         /* Menu Button */
         Button menuButton = new Button();
         menuButton.setText("Menu");
-        menuButton.setOnAction(e -> sceneManager.startMenuScene());
+        menuButton.setOnAction(e -> UIManager.startMenuScene());
 
         BoardPane boardPane = new BoardPane();
 
         /* Creating Layout */
         FlowPane analysisLayout = new FlowPane();
-        analysisLayout.setStyle("-fx-background-color: " + Display.ColourToHexString(Display.BACKGROUND_COLOR));
+        analysisLayout.setStyle("-fx-background-color: " + DisplayConfig.ColourToHexString(DisplayConfig.BACKGROUND_COLOR));
         analysisLayout.setPadding(new Insets(30, 30, 30, 30));
         analysisLayout.setAlignment(Pos.CENTER);
 
@@ -40,12 +41,12 @@ public class AnalysisScene extends SceneBase {
             if (menuChild.getClass().getName().equals("javafx.scene.control.Button")) {
                 Button button = (Button) menuChild;
                 button.setPrefSize(250, 60);
-                button.setStyle("-fx-background-color: " + Display.ColourToHexString(Display.BUTTON_COLOR));
-                button.setTextFill(Display.TEXT_COLOR);
-                button.setFont(Display.NORMAL_FONT);
+                button.setStyle("-fx-background-color: " + DisplayConfig.ColourToHexString(DisplayConfig.BUTTON_COLOR));
+                button.setTextFill(DisplayConfig.TEXT_COLOR);
+                button.setFont(DisplayConfig.NORMAL_FONT);
             }
         }
 
-        this.scene = new Scene(analysisLayout, sceneManager.screenWidth, sceneManager.screenHeight);
+        this.scene = new Scene(analysisLayout, UIManager.screenWidth, UIManager.screenHeight);
     }
 }
