@@ -46,6 +46,7 @@ public abstract class Display {
 
     public static final String FONT_FAMILY = "Verdana";
     public static final Font TITLE_FONT =  Font.font(FONT_FAMILY, FontWeight.BLACK, FontPosture.REGULAR, 100);
+    public static final Font HEADING_FONT =  Font.font(FONT_FAMILY, FontWeight.BLACK, FontPosture.REGULAR, 75);
     public static final Font NORMAL_FONT = Font.font(FONT_FAMILY, FontWeight.SEMI_BOLD, FontPosture.REGULAR, 25);
 
 }

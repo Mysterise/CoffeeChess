@@ -1,6 +1,6 @@
 package CoffeeChess.UI.Scenes;
 
-import CoffeeChess.UI.Board.BoardDisplay;
+import CoffeeChess.UI.Board.BoardPane;
 import CoffeeChess.UI.Display;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
@@ -16,16 +16,16 @@ public class AnalysisScene extends SceneBase {
         this.sceneManager = sceneManager;
 
         /* Title */
-        Label titleLabel = new Label("Analysis BoardDisplay");
+        Label titleLabel = new Label("Analysis Board");
         titleLabel.setTextFill(Display.TEXT_COLOR);
-        titleLabel.setFont(Display.TITLE_FONT);
+        titleLabel.setFont(Display.HEADING_FONT);
 
         /* Menu Button */
         Button menuButton = new Button();
         menuButton.setText("Menu");
         menuButton.setOnAction(e -> sceneManager.startMenuScene());
 
-        BoardDisplay boardDisplay = new BoardDisplay();
+        BoardPane boardPane = new BoardPane();
 
         /* Creating Layout */
         FlowPane analysisLayout = new FlowPane();
@@ -34,7 +34,7 @@ public class AnalysisScene extends SceneBase {
         analysisLayout.setAlignment(Pos.CENTER);
 
         // Adding all nodes to analysisLayout
-        analysisLayout.getChildren().addAll(titleLabel, boardDisplay, menuButton);
+        analysisLayout.getChildren().addAll(titleLabel, boardPane, menuButton);
         // Modifying all button nodes
         for (Node menuChild : analysisLayout.getChildren()) {
             if (menuChild.getClass().getName().equals("javafx.scene.control.Button")) {
