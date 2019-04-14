@@ -16,7 +16,7 @@ public class Pawn extends Piece {
             new Position(1, -1)
     ));
 
-    public Pawn (boolean isWhite, Position pos) {
+    public Pawn(boolean isWhite, Position pos) {
         super(isWhite, pos);
         if (!isWhite) reverseRelativeMoveSet();
     }
@@ -32,8 +32,7 @@ public class Pawn extends Piece {
         }
     }
 
-    @Override
-    public String toString() {
-        return "" + colorNotation() + "_pawn";
+    protected String getName() {
+        return "pawn";
     }
 }

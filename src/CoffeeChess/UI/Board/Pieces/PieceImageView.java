@@ -12,7 +12,6 @@ public class PieceImageView extends ImageView {
 
     public PieceImageView(Piece piece) {
         if (piece == null) return;
-        System.out.println(piece.toString());
         Image img = new Image(PATH + piece.toString() + FILE_EXT);
         setImage(img);
         setFitHeight(BoardPane.SQUARE_SIZE);
