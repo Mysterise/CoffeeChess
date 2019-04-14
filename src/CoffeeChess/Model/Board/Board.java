@@ -8,14 +8,9 @@ public class Board {
     public static final int NUM_ROWS = 8;
     public static final int NUM_COLUMNS = 8;
 
-    public static final int COL_A = 0;
-    public static final int COL_B = 1;
-    public static final int COL_C = 2;
-    public static final int COL_D = 3;
-    public static final int COL_E = 4;
-    public static final int COL_F = 5;
-    public static final int COL_G = 6;
-    public static final int COL_H = 7;
+    public static class Col {
+        public static final int A = 0, B = 1, C = 2, D = 3, E = 4, F = 5, G = 6, H = 7;
+    }
 
     private Piece[][] state = new Piece[NUM_ROWS][NUM_COLUMNS];
 
@@ -36,30 +31,30 @@ public class Board {
         }
 
         /* Setup Rooks */
-        state[WHITE_ROW][COL_A] = new Rook(true, new Position(WHITE_ROW, COL_A));
-        state[WHITE_ROW][COL_H] = new Rook(true, new Position(WHITE_ROW, COL_H));
-        state[BLACK_ROW][COL_A] = new Rook(false, new Position(BLACK_ROW, COL_A));
-        state[BLACK_ROW][COL_H] = new Rook(false, new Position(BLACK_ROW, COL_H));
+        state[WHITE_ROW][Col.A] = new Rook(true, new Position(WHITE_ROW, Col.A));
+        state[WHITE_ROW][Col.H] = new Rook(true, new Position(WHITE_ROW, Col.H));
+        state[BLACK_ROW][Col.A] = new Rook(false, new Position(BLACK_ROW, Col.A));
+        state[BLACK_ROW][Col.H] = new Rook(false, new Position(BLACK_ROW, Col.H));
 
         /* Setup Knights */
-        state[WHITE_ROW][COL_B] = new Knight(true, new Position(WHITE_ROW, COL_A));
-        state[WHITE_ROW][COL_G] = new Knight(true, new Position(WHITE_ROW, COL_G));
-        state[BLACK_ROW][COL_B] = new Knight(false, new Position(BLACK_ROW, COL_A));
-        state[BLACK_ROW][COL_G] = new Knight(false, new Position(BLACK_ROW, COL_G));
+        state[WHITE_ROW][Col.B] = new Knight(true, new Position(WHITE_ROW, Col.B));
+        state[WHITE_ROW][Col.G] = new Knight(true, new Position(WHITE_ROW, Col.G));
+        state[BLACK_ROW][Col.B] = new Knight(false, new Position(BLACK_ROW, Col.B));
+        state[BLACK_ROW][Col.G] = new Knight(false, new Position(BLACK_ROW, Col.G));
 
         /* Setup Bishops */
-        state[WHITE_ROW][COL_C] = new Bishop(true, new Position(WHITE_ROW, COL_C));
-        state[WHITE_ROW][COL_F] = new Bishop(true, new Position(WHITE_ROW, COL_F));
-        state[BLACK_ROW][COL_C] = new Bishop(false, new Position(BLACK_ROW, COL_C));
-        state[BLACK_ROW][COL_F] = new Bishop(false, new Position(BLACK_ROW, COL_F));
+        state[WHITE_ROW][Col.C] = new Bishop(true, new Position(WHITE_ROW, Col.C));
+        state[WHITE_ROW][Col.F] = new Bishop(true, new Position(WHITE_ROW, Col.F));
+        state[BLACK_ROW][Col.C] = new Bishop(false, new Position(BLACK_ROW, Col.C));
+        state[BLACK_ROW][Col.F] = new Bishop(false, new Position(BLACK_ROW, Col.F));
 
         /* Setup Queens */
-        state[WHITE_ROW][COL_D] = new Queen(true, new Position(WHITE_ROW, COL_D));
-        state[BLACK_ROW][COL_D] = new Queen(false, new Position(BLACK_ROW, COL_D));
+        state[WHITE_ROW][Col.D] = new Queen(true, new Position(WHITE_ROW, Col.D));
+        state[BLACK_ROW][Col.D] = new Queen(false, new Position(BLACK_ROW, Col.D));
 
         /* Setup Kings */
-        state[WHITE_ROW][COL_E] = new King(true, new Position(WHITE_ROW, COL_E));
-        state[BLACK_ROW][COL_E] = new King(false, new Position(BLACK_ROW, COL_E));
+        state[WHITE_ROW][Col.E] = new King(true, new Position(WHITE_ROW, Col.E));
+        state[BLACK_ROW][Col.E] = new King(false, new Position(BLACK_ROW, Col.E));
     }
 
     public Piece[][] getState() {
